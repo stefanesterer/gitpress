@@ -1,0 +1,1 @@
+* spring data for allowing github to post to this application
