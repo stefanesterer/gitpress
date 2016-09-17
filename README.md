@@ -5,7 +5,9 @@ repository) and which loads the raw text of the changed markdown and posts it to
 
 ## Status:
 
-Work in progress
+Work in progress:
+* Accepts Github Commit Notification POST Request
+* Is able to extract some data from the sent JSON
 
 ## Howto:
 
@@ -17,4 +19,5 @@ Work in progress
 
 ## Todos: 
 
-* spring data for allowing github to post to this application
+* fix maven build
+* Read all the necessary information out of the json, collect the modified *.md files and try to upload them to wordpress
