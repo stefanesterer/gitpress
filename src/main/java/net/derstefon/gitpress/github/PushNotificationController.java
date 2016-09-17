@@ -8,19 +8,18 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import net.derstefon.gitpress.common.Config;
+import net.derstefon.gitpress.service.NotificationService;
 
 @Controller
 public class PushNotificationController {
 
-	
 	@Autowired
-	private Config config;
+	private NotificationService notificationService;
 	
 	@RequestMapping(value = "/notification", method = RequestMethod.POST)
 	public ResponseEntity<Boolean> update(@RequestBody PushNotification pushNotification) {
 		System.out.println(pushNotification);
-		System.out.println(config.getRelevantBranch());
+		notificationService.update(pushNotification);
 		return new ResponseEntity<Boolean>(true, HttpStatus.OK);
 
 	}
