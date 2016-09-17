@@ -1,7 +1,7 @@
 # Publish markdown text on wordpress when pushing to github
 
-* Spring Boot Application which reacts to github notifications (e.g. commits on a specific branch on a specific 
-repository) and which loads the raw text of the changed markdown and posts it to a configured wordpress instance * 
+*Spring Boot Application which reacts to github notifications (e.g. commits on a specific branch on a specific 
+repository) and which loads the raw text of the changed markdown and posts it to a configured wordpress instance* 
 
 ## Status:
 

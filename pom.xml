@@ -2,8 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.derstefon</groupId>
-	<artifactId>github-notifications</artifactId>
+	<artifactId>gitpress</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<description>Spring Boot Application which reacts to github notifications (e.g. commits on a specific branch on a specific repository) and which loads the raw text of the changed markdown and posts it to a configured wordpress instance</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
