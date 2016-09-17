@@ -18,7 +18,6 @@ public class PushNotificationController {
 	
 	@RequestMapping(value = "/notification", method = RequestMethod.POST)
 	public ResponseEntity<Boolean> update(@RequestBody PushNotification pushNotification) {
-		System.out.println(pushNotification);
 		notificationService.update(pushNotification);
 		return new ResponseEntity<Boolean>(true, HttpStatus.OK);
 
