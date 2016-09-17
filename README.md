@@ -19,5 +19,4 @@ Work in progress:
 
 ## Todos: 
 
-* fix maven build
 * Read all the necessary information out of the json, collect the modified *.md files and try to upload them to wordpress
