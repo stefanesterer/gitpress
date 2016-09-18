@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import net.derstefon.gitpress.service.NotificationService;
 
+import java.util.Collection;
+
 @Controller
 public class PushNotificationController {
 
@@ -18,7 +20,10 @@ public class PushNotificationController {
 	
 	@RequestMapping(value = "/notification", method = RequestMethod.POST)
 	public ResponseEntity<Boolean> update(@RequestBody PushNotification pushNotification) {
-		notificationService.update(pushNotification);
+		Collection<String> update = notificationService.update(pushNotification);
+
+		update.stream().forEach( e ->  System.out.println(e));
+
 		return new ResponseEntity<Boolean>(true, HttpStatus.OK);
 
 	}
