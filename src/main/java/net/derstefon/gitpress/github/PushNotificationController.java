@@ -20,10 +20,7 @@ public class PushNotificationController {
 	
 	@RequestMapping(value = "/notification", method = RequestMethod.POST)
 	public ResponseEntity<Boolean> update(@RequestBody PushNotification pushNotification) {
-		Collection<String> update = notificationService.update(pushNotification);
-
-		update.stream().forEach( e ->  System.out.println(e));
-
+		notificationService.update(pushNotification);
 		return new ResponseEntity<Boolean>(true, HttpStatus.OK);
 
 	}
