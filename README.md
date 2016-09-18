@@ -16,7 +16,12 @@ Work in progress:
 * Start ngrok (e.g. *./ngrok http 4567* ) and copy the provided public internet address for your associated local service
 * [Create a webhook](https://github.com/stefanesterer/derstefon-test/settings/hooks/new) for this repository (e.g. for push events in our case). Specify the url provided by ngrok as the Payload URL
 * Start the local application on the right port (e.g. 4567)
+* Push to the repository and debug the application
 
 ## Todos: 
 
-* Read all the necessary information out of the json, collect the modified *.md files and try to upload them to wordpress
+* get the raw data of the added/modified *.md files from the git repository
+* connect the data to wordpress blog postings/pages
+* update wordpress with the new data
+* insert debug/activity data into database
+* create angular2 app to show debug/activity data and to allow configuration
