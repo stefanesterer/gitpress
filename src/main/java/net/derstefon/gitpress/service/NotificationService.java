@@ -24,8 +24,11 @@ public class NotificationService {
 
     public void update(PushNotification pushNotification) {
         if (!pushNotification.getRef().equals(config.getRelevantBranch())) {
+            LOGGER.debug("Do nothing because given branch {} is not the relevant {} one", pushNotification.getRef(),
+                    config.getRelevantBranch());
             return;
         }
+        LOGGER.debug("Branch matches the relevant {} one. Further work necessary", config.getRelevantBranch());
         mdFileCollector.collect(pushNotification.getCommits());
     }
 
