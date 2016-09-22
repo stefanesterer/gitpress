@@ -22,6 +22,7 @@ Work in progress:
 
 * get the raw data of the added/modified *.md files from the git repository
 * connect the data to wordpress blog postings/pages
+* add security (which urls can post to our service, use spring security with url restriction) / [secure with secret token](https://developer.github.com/webhooks/securing/)
 * update wordpress with the new data
 * insert debug/activity data into database
 * create angular2 app to show debug/activity data and to allow configuration
