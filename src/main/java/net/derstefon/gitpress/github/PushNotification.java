@@ -12,6 +12,10 @@ public class PushNotification {
 		return ref;
 	}
 
+	public String getBranch() {
+		return ref.replaceAll("refs/heads/", "");
+	}
+
 	public void setRef(String ref) {
 		this.ref = ref;
 	}
