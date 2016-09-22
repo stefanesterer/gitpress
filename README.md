@@ -8,6 +8,7 @@ repository) and which loads the raw text of the changed markdown and posts it to
 Work in progress:
 * Accepts Github Commit Notification POST Request
 * Is able to extract some data from the sent JSON
+* Is able to get the raw data of the added/modified *.md files from the git repository
 
 ## Howto:
 
@@ -20,8 +21,7 @@ Work in progress:
 
 ## Todos: 
 
-* get the raw data of the added/modified *.md files from the git repository
-* connect the data to wordpress blog postings/pages
+* connect the data to wordpress blog postings/pages ([via xml-rpc](https://codex.wordpress.org/XML-RPC_WordPress_API))
 * add security (which urls can post to our service, use spring security with url restriction) / [secure with secret token](https://developer.github.com/webhooks/securing/)
 * update wordpress with the new data
 * insert debug/activity data into database
