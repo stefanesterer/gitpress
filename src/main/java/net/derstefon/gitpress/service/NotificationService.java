@@ -8,6 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+import java.util.StringJoiner;
+
 /**
  * Responsible for collecting the list of modified or added *.md files for a collection of commits
  */
@@ -29,7 +32,8 @@ public class NotificationService {
             return;
         }
         LOGGER.debug("Branch matches the relevant {} one. Further work necessary", config.getRelevantBranch());
-        mdFileCollector.collect(pushNotification.getCommits());
+        Collection<String> touchedFiles = mdFileCollector.collect(pushNotification.getCommits());
+        LOGGER.debug("Following files need to be updated in wordpress: {}", String.join(",", touchedFiles));
     }
 
 }
